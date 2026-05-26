@@ -6,11 +6,13 @@ class Vision:
 
     def prepprocess(self, frame):
         frame=cv2.resize(frame,(640,480))
-
-        frame = frame/255
         frame = cv2.GaussianBlur(frame, (5, 5), 0)
-
         return frame 
+    
+    def features(self, frame):
+        gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        edges=cv2.Canny(gray, 100, 200)
+        return edges
     
     def start(self):
 
@@ -21,11 +23,11 @@ class Vision:
                 break
             
             processed_frame = self.prepprocess(frame)
-            display_frame=(processed_frame*255).astype('uint8')
-            cv2.imshow('Camera', display_frame)  
+            features=self.features(processed_frame)
+            cv2.imshow('Features', features)  
 
 
-            if cv2.waitKey(1)==ord('1'):
+            if cv2.waitKey(1)==ord('q'):
                 break
 
         self.cap.release()
