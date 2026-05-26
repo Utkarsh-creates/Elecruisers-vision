@@ -25,9 +25,11 @@ class Vision:
 
             if not ret: 
                 break
-            
+            real = frame.copy()
             processed_frame = self.prepprocess(frame)
             features=self.features(processed_frame)
+            cv2.imshow("Original Camera", real)
+
             cv2.imshow('Features', features)  
 
 
@@ -35,7 +37,7 @@ class Vision:
                 break
 
         self.cap.release()
-        self.cap.destroyAllWindows()
+        cv2.destroyAllWindows()
 
 def main():
     camera = Vision()
