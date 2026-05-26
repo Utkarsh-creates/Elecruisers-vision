@@ -9,7 +9,7 @@ class Vision:
         frame = cv2.GaussianBlur(frame, (5, 5), 0)
         return frame 
     
-    def normalizser(self, frame):
+    def normalizer(self, frame):
         frame = frame/255
         #dummy method for normalization :)
 
@@ -27,10 +27,10 @@ class Vision:
                 break
             real = frame.copy()
             processed_frame = self.prepprocess(frame)
-            features=self.features(processed_frame)
+            edges=self.features(processed_frame)
             cv2.imshow("Original Camera", real)
 
-            cv2.imshow('Features', features)  
+            cv2.imshow('Features', edges)  
 
 
             if cv2.waitKey(1)==ord('q'):
