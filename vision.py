@@ -9,6 +9,10 @@ class Vision:
         frame = cv2.GaussianBlur(frame, (5, 5), 0)
         return frame 
     
+    def normalizser(self, frame):
+        frame = frame/255
+        #dummy method for normalization :)
+
     def features(self, frame):
         gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         edges=cv2.Canny(gray, 100, 200)
