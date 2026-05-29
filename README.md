@@ -88,5 +88,8 @@ Place the downloaded file in the project root directory
 ## Sample Output
 
 ![Output Screenshot](./assets/output.png)
+
+## Lane Detection
+
 ![Lane Detection Screenshot](./assets/lane.png)
 
