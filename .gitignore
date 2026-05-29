@@ -1,0 +1,6 @@
+# Models
+*.pt
+*.pth
+*.onnx
+weights/
+models/yolopv2.pt 
