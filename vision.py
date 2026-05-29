@@ -2,7 +2,7 @@ import cv2
 
 class Vision:
     def __init__(self):
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture("File.mp4")
 
     def prepprocess(self, frame):
         frame=cv2.resize(frame,(640,480))
