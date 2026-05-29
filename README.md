@@ -91,7 +91,7 @@ Place the downloaded file in the project root directory
 
 ## Lane Detection
 
-![Lane Detection Screenshot](./assets/lane.png)
+![Lane Detection Screenshot](./assets/lane_final.png)
 
 ## Demo Video
 [Lane Detection Demo](assets/video.mp4)
