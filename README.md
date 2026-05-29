@@ -93,3 +93,6 @@ Place the downloaded file in the project root directory
 
 ![Lane Detection Screenshot](./assets/lane.png)
 
+## Demo Video
+[Lane Detection Demo](assets/video.mp4)
+
